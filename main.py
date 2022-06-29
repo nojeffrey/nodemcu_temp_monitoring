@@ -20,7 +20,7 @@ while not sta_if.isconnected():
 roms = ds_sensor.scan()
 
 #192.168.1.111 is my influxdb server with no authentication configured.
-#It will create the measurement `temps` automatically.
+#It will create the measurement `ensuite` automatically.
 
 while True:
   try:

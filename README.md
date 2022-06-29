@@ -29,14 +29,23 @@ Push main.py to flash:
 sudo ampy --port /dev/ttyUSB0 put main.py
 ```
 
-Now power up the ESP8266 board somewhere and it should post the temp once every 60 seconds to influxdb over wifi.
 
-
-To query from influx:
+Need to create the DB `temps` on influxdb server
 ```
-$ influx
+pi@pizero:~ $ influx
+Connected to http://localhost:8086 version 1.6.7~rc0
+InfluxDB shell version: 1.6.7~rc0
+> create database temps
+```
+Now power up the ESP8266 board somewhere within range and it should post the temp once every 60 seconds to influxdb over wifi.
+
+```
+pi@pizero:~ $ influx
+Connected to http://localhost:8086 version 1.6.7~rc0
+InfluxDB shell version: 1.6.7~rc0
 > use temps
-select * from ensuite
+Using database temps
+> select * from ensuite
 name: ensuite
 time                temp
 ----                ----
@@ -46,4 +55,3 @@ time                temp
 1655450575860063626 18.1
 ...
 ```
-
