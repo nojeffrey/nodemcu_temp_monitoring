@@ -1,9 +1,12 @@
 # Nodemcu/ESP8266 temperature monitoring
 Micropython code for a Nodemcu/ESP8266 with a DS18B20 temp sensor to post to a InfluxDB server
 
-Follow the wiring diagram here: https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/06/ds18b20_esp32_single_normal.png?w=750&quality=100&strip=all&ssl=1
+Follow the wiring diagram [here](https://randomnerdtutorials.com/micropython-ds18b20-esp32-esp8266/)
+![Wiring diagram)(ds18b20_esp8266_single_normal_F.webp)
+
 Download latest Micropython firmware from https://micropython.org/download
-Flash Micropython on to the board:
+
+Flash Micropython to the board:
 ```
 sudo pip install esptool
 sudo esptool.py --port /dev/ttyUSB0 erase_flash
@@ -21,7 +24,9 @@ sudo picocom /dev/ttyUSB0 -b115200
 ```
 
 Push main.py to flash:
-`sudo ampy --port /dev/ttyUSB0 put main.py`
+```
+sudo ampy --port /dev/ttyUSB0 put main.py
+```
 
 
 To query from influx:
@@ -38,3 +43,4 @@ time                temp
 1655450575860063626 18.1
 ...
 ```
+
