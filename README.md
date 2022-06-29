@@ -29,6 +29,8 @@ Push main.py to flash:
 sudo ampy --port /dev/ttyUSB0 put main.py
 ```
 
+Now power up the ESP8266 board somewhere and it should post the temp once every 60 seconds to influxdb over wifi.
+
 
 To query from influx:
 ```
