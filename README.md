@@ -3,7 +3,7 @@ Micropython code for a Nodemcu/ESP8266 with a DS18B20 temp sensor to post to a I
 
 Follow the wiring diagram [here:](https://randomnerdtutorials.com/micropython-ds18b20-esp32-esp8266/)
 
-<img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/06/ds18b20_esp8266_single_normal_F.png?w=559&quality=100&strip=all&ssl=1" width="599" height="763">![Wiring diagram)(ds18b20_esp8266_single_normal_F.webp)
+<img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/06/ds18b20_esp8266_single_normal_F.png?w=559&quality=100&strip=all&ssl=1" width="599" height="763">
 
 Download latest Micropython firmware from https://micropython.org/download
 
